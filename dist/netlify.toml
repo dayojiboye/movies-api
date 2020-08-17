@@ -6,4 +6,4 @@
 [[headers]]
   for = "/*"
     [headers.values]
-    Access-Control-Allow-Origin = "/.netlify/functions/app/movies/"
+    Access-Control-Allow-Origin = "https://dummy-movies-api.netlify.app/"

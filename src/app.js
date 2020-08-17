@@ -25,13 +25,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/.netlify/functions/app/movies/', movies.allMovies);
+app.use('/.netlify/functions/app/movies', movies.allMovies);
 app.use('/.netlify/functions/app/movies', movies.filterMovies);
 app.use('/.netlify/functions/app/movies', addMovie);
 app.use('/.netlify/functions/app/movies', deleteMovie);
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '/.netlify/functions/app/movies/');
+  res.header(
+    'Access-Control-Allow-Origin',
+    'https://dummy-movies-api.netlify.app/'
+  );
   next();
 });
 
