@@ -1,4 +1,2 @@
 [build]
-  command = "npm build && cd functions/app/movies && npm"
   functions = "functions"
-  publish = "dist"
