@@ -28,6 +28,12 @@ app.use((req, res, next) => {
     'Access-Control-Allow-Origin',
     'https://dummy-movies-api.netlify.app/.netlify/functions/app/movies'
   );
+  res.setHeader(
+    'Access-Control-Allow-Origin',
+    'https://dummy-movies-api.netlify.app/.netlify/functions/app/movies' +
+      '/' +
+      req.params
+  );
   res.setHeader('Access-Control-Allow-Methods', '*');
   next();
 });
