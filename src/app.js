@@ -30,9 +30,7 @@ app.use((req, res, next) => {
   );
   res.setHeader(
     'Access-Control-Allow-Origin',
-    'https://dummy-movies-api.netlify.app/.netlify/functions/app/movies' +
-      '/' +
-      req.params
+    'https://dummy-movies-api.netlify.app'
   );
   res.setHeader('Access-Control-Allow-Methods', '*');
   next();
