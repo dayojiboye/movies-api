@@ -30,11 +30,6 @@ app.use('/.netlify/functions/app/movies', movies.filterMovies);
 app.use('/.netlify/functions/app/movies', addMovie);
 app.use('/.netlify/functions/app/movies', deleteMovie);
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  next();
-});
-
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
