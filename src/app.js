@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', '*');
-  res.setHeader('Content-Type', 'application/json');
+  res.setHeader('Content-Type', '*');
   next();
 });
 
