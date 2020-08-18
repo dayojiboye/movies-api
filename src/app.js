@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use((req, res, next) => {
   res.header(
     'Access-Control-Allow-Origin',
-    'https://dummy-movies-api.netlify.app/.netlify/functions/app/movies'
+    'https://dummy-movies-api.netlify.app/'
   );
   res.header('Access-Control-Allow-Methods', '*');
   res.header(
