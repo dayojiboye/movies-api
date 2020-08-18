@@ -24,7 +24,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://dummy-movies-api');
+  res.header(
+    'Access-Control-Allow-Origin',
+    'https://dummy-movies-api.netlify.app/.netlify/functions/app/movies'
+  );
   res.header('Access-Control-Allow-Methods', '*');
   res.header(
     'Access-Control-Allow-Headers',
